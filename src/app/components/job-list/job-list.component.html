@@ -1,0 +1,21 @@
+<h2>Job List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Position</th>
+            <th>Status</th>
+            <th>Applied Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let job of jobs">
+            <td>{{ job.company }}</td>
+            <td>{{ job.position }}</td>
+            <td>{{ job.status }}</td>
+            <td>{{ job.appliedDate }}</td>I
+            <td><button (click)="deleteJob(job.id)">Delete</button>
+        </tr>
+    </tbody>
+</table>

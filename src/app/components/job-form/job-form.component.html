@@ -1,0 +1,10 @@
+<h2>Add Job Application</h2>
+<form (ngSubmit)="submitForm()" #jobForm="ngForm">
+  <input type="text" placeholder="Company" [(ngModel)]="job.company" name="company" required />
+  <input type="text" placeholder="Position" [(ngModel)]="job.position" name="position" required />
+  <select [(ngModel)]="job.status" name="status" required>
+    <option *ngFor="let status of statusoptions" [value]="status">{{ status }}</option>
+  </select>
+  <input type="date" [(ngModel)]="job.appliedDate" name="appliedDate" required />
+  <button type="submit">Add Job</button>
+</form>
